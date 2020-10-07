@@ -1,0 +1,17 @@
+---
+- name: add things we need to server
+  hosts: localhost
+  remote_user: root
+
+  tasks:
+  - name: install packages
+    yum: name={{ item }} update_cache=yes state=latest
+    with_items:
+      - git
+      - python3
+      - snapd
+
+  - name: Install foo
+    community.general.snap:
+      name:
+        - blender
