@@ -9,9 +9,7 @@
     with_items:
       - git
       - python3
-      - snapd
 
-  - name: Install foo
-    community.general.snap:
-      name:
-        - blender
+  - hosts: renderfarm
+    roles:
+       - victorklos.install-blender
