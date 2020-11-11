@@ -14,6 +14,8 @@
         - xz
         - blender
       state: latest
+  - name: Run a command using a templated variable (always use quote filter to avoid injection)
+    shell: git clone https://github.com/Blender-Render-Farm/blender-render-farm.git
 
 #  - name: unisntall stuf
 #    yum:
