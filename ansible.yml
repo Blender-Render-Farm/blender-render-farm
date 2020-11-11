@@ -5,16 +5,28 @@
   become: true
 
   tasks:
-  - name: Install the latest version of Packages
+  - name: Install the latest version of git
     yum:
       name:
         - git
+  - name: Install the latest version of python
+    yum:
+      name:
         - python3
+  - name: Install the latest version of wget
+    yum:
+      name:
         - wget
+  - name: Install the latest version of xz
+    yum:
+      name:
         - xz
+  - name: Install the latest version of blender
+    yum:
+      name:
         - blender
       state: latest
-  - name: Run a command using a templated variable (always use quote filter to avoid injection)
+  - name: clone github repo
     shell: git clone https://github.com/Blender-Render-Farm/blender-render-farm.git
 
 #  - name: unisntall stuf
