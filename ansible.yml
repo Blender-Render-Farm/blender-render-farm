@@ -2,14 +2,16 @@
 - name: add things we need to server
   hosts: localhost
   remote_user: root
+  become: true
 
   tasks:
-  - name: install packages
-    yum: name={{ item }} update_cache=yes state=latest
-    with_items:
-      - git
-      - python3
+  - name: Install the latest version of Packages
+    yum:
+      name:
+        - git
+        - python3
+        - wget
+        - xz
+      state: latest
 
-  - hosts: renderfarm
-    roles:
-       - victorklos.install-blender
+
