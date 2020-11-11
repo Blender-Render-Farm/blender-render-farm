@@ -12,7 +12,6 @@
         - python3
         - wget
         - xz
-<<<<<<< HEAD
         - blender
       state: latest
 
@@ -27,8 +26,3 @@
 #  - name: install blender cli
 #    roles:
 #      - roles.renderfarm
-=======
-      state: latest
-
-
->>>>>>> fb648eef6eef63577c8e597a01b9c8655e37e8ff
