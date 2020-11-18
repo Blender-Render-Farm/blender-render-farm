@@ -36,6 +36,7 @@
     pip: 
       requirements: ~/blender-render-farm/requirements.txt
       virtualenv: ~/blender-render-app
+      virtualenv_python: python3.6
       
 
 #  - name: unisntall stuf
