@@ -28,6 +28,12 @@
       state: latest
   - name: clone github repo
     shell: git clone https://github.com/Blender-Render-Farm/blender-render-farm.git
+    
+  - name: Install requirements
+    pip: 
+      requirements: requirements.txt
+      virtualenv: ~/blender-render-app
+      virtualenv_python: python3.6
 
 #  - name: unisntall stuf
 #    yum:
