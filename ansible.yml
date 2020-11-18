@@ -34,7 +34,7 @@
 
   - name: Install requirements.txt
     pip: 
-      requirements: requirements.txt
+      requirements: ~/blender-render-farm/requirements.txt
       virtualenv: ~/blender-render-app
       
 
